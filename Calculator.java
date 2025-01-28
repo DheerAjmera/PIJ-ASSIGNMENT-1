@@ -27,9 +27,15 @@ public class Calculator {
     }
 
     // Calculates the nth Fibonacci number using recursion.
-    public int fibonacci(int n) {
-        if (n <= 1) return n;
-        return fibonacci(n - 1) + fibonacci(n - 2);
+   public void printFibonacci(int n) {
+        int a = 0, b = 1;
+        for (int i = 0; i < n; i++) {
+            System.out.print(a + " ");
+            int next = a + b;
+            a = b;
+            b = next;
+        }
+        System.out.println();
     }
 
     // Calculates the sum of all elements in the array.
